@@ -1545,7 +1545,7 @@ class ezcMailImapTransport
     {
         if ( $this->options->uidReferencing )
         {
-            $messages = array_flip( $this->listUniqueIdentifiers() );
+            $messages = $this->listUniqueIdentifiers($number);
         }
         else
         {
